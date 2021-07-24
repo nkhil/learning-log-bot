@@ -7,5 +7,6 @@ module.exports = {
     FROM_NUMBER: process.env.TWILIO_FROM_NUMBER,
     TO_NUMBER: process.env.TWILIO_TO_NUMBER,
   },
-  TEST_MESSAGE: 'Hi, this is your learning log. Have you learned anything recently?',
+  TEST_MESSAGE:
+    'Hi, this is your learning log. Have you learned anything recently?',
 };

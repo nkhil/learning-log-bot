@@ -1,23 +1,9 @@
-const twilio = require('twilio');
+const logger = require('pino')();
+const app = require('./src/index');
+const { name } = require('./package.json');
 
-const {
-  TWILIO,
-  TEST_MESSAGE
-} = require('./constants');
+const port = 8080;
 
-// Setup Twilio client
-const tClient = twilio(
-  TWILIO.ACCOUNT_SID,
-  TWILIO.AUTH_TOKEN
-);
-
-// Send sample message
-tClient
-  .messages
-  .create({
-    from: TWILIO.FROM_NUMBER,
-    to: TWILIO.TO_NUMBER,
-    body: TEST_MESSAGE,
-  }).then(response => {
-    console.log(response)
-  });
+app.listen(port, () => {
+  logger.info(`${name} listening on port ${port}!`);
+});
