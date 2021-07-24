@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 module.exports = {
+  PORT: process.env.PORT || 8080,
   TWILIO: {
     ACCOUNT_SID: process.env.TWILIO_SID,
     AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN,
