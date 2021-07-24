@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "start": "node index.js"
+    "start": "node index.js",
+    "develop": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
