@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "start": "node index.js",
-    "develop": "nodemon index.js"
+    "develop": "nodemon index.js",
+    "dev": "npm run develop"
   },
   "keywords": [],
   "author": "",
