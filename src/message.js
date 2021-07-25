@@ -1,4 +1,5 @@
 const twilio = require('twilio');
+const logger = require('pino')();
 
 const { TWILIO, TEST_MESSAGE } = require('./constants');
 
@@ -12,6 +13,6 @@ tClient.messages
     to: TWILIO.TO_NUMBER,
     body: TEST_MESSAGE,
   })
-  .then((response) => {
-    console.log(response);
+  .then(() => {
+    logger.info('Message sent successfully');
   });
