@@ -5,9 +5,8 @@ const app = require('./src/index');
 const { name } = require('./package.json');
 const { PORT } = require('./src/constants');
 
-cron.schedule('* * * * * 1,3,5', () => {
-  // '* * * * *' will do this every minute.
-  console.log('running a task every minute');
+cron.schedule('00 00 17 * * 0-5', () => {
+  console.log('running a task every day of the work week at 5PM');
   let invoked = false;
   const process = cp.fork('./src/message.js');
 
